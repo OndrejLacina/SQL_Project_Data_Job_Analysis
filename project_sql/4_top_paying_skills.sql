@@ -6,6 +6,7 @@ Question: What are the top skills based on salary?
 */
 
 -- vybírám nejužitečnější skilly pro DA dle počtu inzerátů a podle průměrného platu pro daný skill, resp. který skill má největší váhu pro ohodnocení
+-- fakticky je toto spojení ukolu 4 a 5
 
 SELECT
     s.skills,

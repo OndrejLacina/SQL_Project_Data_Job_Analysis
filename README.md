@@ -1,70 +1,36 @@
-1.  QUERY 1st
-    1.
-2.  QUERY 2nd
-    1.  Celkový pohled (Overall Insights)
-        Ztracené inzeráty podruhé: Ze získaných 100 inzerátů jich reálně v tabulce máme jen 94. To znamená, že 6 firem s obrovským rozpočtem vůbec nespecifikovalo konkrétní technologie.
+# 📊 Data Analyst Job Market Analysis 2023: SQL Portfolio Project
 
-            Svatá trojice vládne: Žebříček nekompromisně vede SQL (požadováno u 82 inzerátů z 94!), následované Pythonem (60) a Tableau (49). Tyto tři věci se objevují s takovou železnou pravidelností, že bez nich u těchto mezinárodních remote pozic nemá smysl ani posílat životopis.
+## 🎯 Project Overview
 
-            Power BI vs. Tableau: V tomto vzorku globálních a vysoce placených remote pozic jasně vítězí Tableau (49) nad Power BI (19). Je to klasický americký a "enterprise" fenomén. Power BI ale roste na síle v evropských korporátech, takže pro tvůj start v Brně to byla správná volba.
+This project explores the data analyst job market in 2023, analyzing top-paying roles, in-demand skills, and the intersection of salary and demand. The ultimate goal is to identify the most optimal technologies to master for an aspiring Data Analyst entering the job market.
 
-    2.  Rozpad: Data Analyst (57 inzerátů)
-        Tohle jsou pozice, kam primárně míříš.
+## 🛠️ Tools & Technologies
 
-            1) SQL (47x)
-            2) Python (35x)
-            3) Tableau (25x)
-            4) R (22x)
-            5)Excel (18x)
+- **SQL (PostgreSQL):** Complex queries involving CTEs (Common Table Expressions), multiple `INNER`/`LEFT JOIN`s, aggregations (`COUNT`, `AVG`, `ROUND`), filtering (`WHERE`, `HAVING`), data formatting, logical sorting.
+- **Database Architecture:** Utilizing a star schema consisting of a main fact table (`job_postings_fact`) and supporting dimension tables (`skills_dim`, `company_dim`).
 
-            ## PM Insight: Všimni si, že se na 5. místě pořád drží Excel. Na této mediorní/juniornější úrovni firmy stále vyžadují, abys uměl data nejen vytáhnout z databáze (SQL), ale i rychle zpracovat nebo nasdílet někomu z ne-technického managementu přes "starý dobrý Excel".
+## 🔍 The 5 Core Questions Answered
 
-    3.  Rozpad: Senior Data Analyst (37 inzerátů)
-        Když se podíváme na ty, kteří už mají nějaký ten rok praxe za sebou, struktura dovedností se zajímavě mění:
+1. **Top-Paying Roles:** What are the top 10 highest-paying Data Analyst jobs available remotely?
+2. **Elite Skill Requirements:** What specific technical skills do these top-paying roles demand?
+3. **Market Demand:** What are the most frequently requested skills for Data Analysts across the entire job market?
+4. **Salary-Driven Skills:** Which technical skills are associated with the highest average salaries? (My modification: What is the average pay for each skill?)
+5. **The Optimal Stack:** Which skills represent the "sweet spot" by offering both high market demand and high financial rewards?
 
-            1) SQL (35x)
-            2) Python (25x)
-            3) Tableau (24x)
-            4) Looker (13x) - Skokově roste!
-            5) R (10x)
+## 💡 Key Business Insights
 
-            PM Insight (Změna myšlení): Co je tady zásadní? U Seniorů padá Excel až na chvost (pouhých 5 zmínek) a na 4. místo vystřelil Looker (moderní cloudový vizualizační nástroj od Googlu). Zároveň u seniorů začínají vystrkovat růžky tvrdší programovací jazyky jako Go a C. Znamená to jediné: čím jsi seniornější, tím víc od tebe firma čeká architektonická a automatizační řešení (Cloud, pokročilé skripty) a tím méně od tebe chce "klikat kontingenční tabulky".
+- **The Baseline:** The absolute foundation is **SQL**, appearing in the vast majority of job postings. Along with **Python** and visual tools (**Tableau / Power BI**), they form the "Big Three" of data analytics. However, **Excel** also has a huge presence, especially for the Data Analyst role
+- **Beware of the "Niche Trap":** While highly specialized skills (like obscure cloud tools) show massive average salaries, their job market in 2023 demand is extremely low. Relying purely on salary data without checking the posting volume (`COUNT`) creates a skewed perspective.
+- **Regional Strategy:** While the global remote market heavily features Tableau and Looker, the European and enterprise markets are deeply rooted in the Microsoft ecosystem. A foundational stack of **SQL, Excel, and Power BI** is the most strategic entry point for Junior/Medior roles.
 
-    # 📊 Top-Paying Data Analyst Roles: Skills & Salary Analysis
+## 🚀 Personal Takeaways
 
-    ## 🎯 Objective
+Over the course of a 3-week intensive sprint, I went from no knowledge of SQL through writing basic queries to understanding deeper database mechanics, such as handling missing data (`NULL` values) and optimizing query performance by choosing single-pass aggregations over unnecessary CTEs where appropriate.
 
-    The goal of this project was to analyze the top 100 highest-paying remote Data Analyst and Senior Data Analyst job postings to identify the most critical skills required by top-tier employers.
+## My Next Steps
 
-    ## 💡 Key Business Insights
-    1. **The "Big Three" Dominance:** Across the top 100 highest-paying jobs, **SQL** is the absolute baseline (requested in 87% of postings), followed closely by **Python** (63%) and **Tableau** (52%).
-    2. **Seniority Shifts the Stack:** While Junior/Medior roles heavily rely on Excel for ad-hoc reporting, Senior roles drop Excel completely in favor of cloud-based architecture and BI tools like Looker and Snowflake.
-    3. **The Presentation Premium:** Interestingly, niche skills linked to executive presentation (like PowerPoint) or specialized Big Data tools (Databricks, Azure) correlated with the absolute highest average salaries (averaging over $210,000).
-    4. **Regional Differences:** While this global dataset highlights Tableau as the primary BI tool, the European/Czech market heavily favors **Power BI** due to Microsoft ecosystem integration. My personal skill development is aligned with this regional demand (SQL + Power BI + Excel).
-
-    ## 🛠️ Methodology
-    - Extracted and filtered data using **PostgreSQL** (CTEs, Subqueries, INNER/LEFT JOINs).
-    - Handled missing data (NULL filtering) and applied logical sorting to identify true market trends.
-
-3.  QUERY 3rd
-    Question: What are the most in-demand skills for Data Analysts? top 5 skills
-    1. Cíl: Zjištění top 5 skills pro Datové analytiky v roce 2023
-       - celosvětově
-
-    2. Použil jsem 3 různá řešení
-       1. řešení = první logika - delší, řazení nejprve textu (skillů) až pak čísel, náročné na výkon
-       2. řešení = optimalizace výkonu - logika numbers first, then text
-       3. řešení = praxe CTEs, human logic
-    3. SQL techniky
-       - základní jako SELECT, FROM, ORDER BY, LIMIT
-       - filtering WHERE
-       - Aggregations COUNT() + GROUB BY
-       - Aliases AS
-       - INNER JOIN, procvičení CTEs
-
-4.  QUERY 4th
-    - vybírám nejužitečnější skilly pro DA dle počtu inzerátů a podle průměrného platu pro daný skill, resp. který skill má největší váhu pro ohodnocení
-
-5.  QUERY 5th
-    - syntaxe je pouze na ukázku jak spojit 2x CTEs, je to ale neefektivní a serverově náročné v tomto ukázkovém případě.
-    - Dalo by se to použít spíše v nesourodých tabulkách, smysl by to dávalo např.: - V jednom CTE se zpracují roční mzdové rozpočty z HR systému a ve druhém CTE se spočítají denní prodeje e-shopu. Tyto dva naprosto odlišné světy pak spojím v hlavním dotazu, abych zjistil, zda se investice do lidí vrací v prodejích.
+- **Mastering Advanced Excel (Power Query/Power Pivot)**
+- **Work on PowerBI**
+- **Improve this SQL project**
+  1. add actuall data
+  2. Q6 - What is the best paying company - list
