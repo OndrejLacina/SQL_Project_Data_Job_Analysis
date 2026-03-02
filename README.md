@@ -66,4 +66,5 @@
     - vybírám nejužitečnější skilly pro DA dle počtu inzerátů a podle průměrného platu pro daný skill, resp. který skill má největší váhu pro ohodnocení
 
 5.  QUERY 5th
-    -
+    - syntaxe je pouze na ukázku jak spojit 2x CTEs, je to ale neefektivní a serverově náročné v tomto ukázkovém případě.
+    - Dalo by se to použít spíše v nesourodých tabulkách, smysl by to dávalo např.: - V jednom CTE se zpracují roční mzdové rozpočty z HR systému a ve druhém CTE se spočítají denní prodeje e-shopu. Tyto dva naprosto odlišné světy pak spojím v hlavním dotazu, abych zjistil, zda se investice do lidí vrací v prodejích.

@@ -18,7 +18,8 @@ INNER JOIN skills_dim AS s
     ON sj.skill_id = s.skill_id
 WHERE
     j.job_title_short = 'Data Analyst' AND
-    j.salary_year_avg IS NOT NULL
+    j.salary_year_avg IS NOT NULL AND
+    j.job_location = 'Anywhere'
 GROUP BY
     s.skills
 HAVING
