@@ -61,3 +61,9 @@
        - Aggregations COUNT() + GROUB BY
        - Aliases AS
        - INNER JOIN, procvičení CTEs
+
+4.  QUERY 4th
+    - vybírám nejužitečnější skilly pro DA dle počtu inzerátů a podle průměrného platu pro daný skill, resp. který skill má největší váhu pro ohodnocení
+
+5.  QUERY 5th
+    -
