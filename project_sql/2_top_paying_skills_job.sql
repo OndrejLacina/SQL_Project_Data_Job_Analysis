@@ -1,10 +1,10 @@
 /* 
 Question: What skills are required for the 100 top-paying data analyst jobs?
-    1) Use the top 10 highest-paying Data Analyst jobs from first query
+    1) Use the top 100 highest-paying Data Analyst jobs from first query
     2) Add the specific skills required for these roles
     - WHY? it provides a detailed look at which high-paying jobs demand certain skill, helping job seekers understand which skills to develop that align with top salaries
 
-    - použil jsem syntaxi z předchozího úkolu - používám pořád roli senior DA + rozšíření na TOP 100
+    - použil jsem syntaxi z předchozího úkolu - používám pořád roli DA + senior DA + rozšíření na TOP 100
     - vložil do CTE
     - vytvořil nové inner join a uložil výsledek do .csv
 */

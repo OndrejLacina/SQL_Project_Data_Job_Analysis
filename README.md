@@ -8,8 +8,14 @@ This project explores the data analyst job market in 2023, analyzing top-paying 
 
 - **SQL (PostgreSQL):** Complex queries involving CTEs (Common Table Expressions), multiple `INNER`/`LEFT JOIN`s, aggregations (`COUNT`, `AVG`, `ROUND`), filtering (`WHERE`, `HAVING`), data formatting, logical sorting.
 - **Database Architecture:** Utilizing a star schema consisting of a main fact table (`job_postings_fact`) and supporting dimension tables (`skills_dim`, `company_dim`).
+- **VS Code:** My IDE to executing the SQL and coding
+- **Git & GitHub:** version control and sharing my SQL queries and the project
 
-## 🔍 The 5 Core Questions Answered
+### 🔍 SQL queries? Check them out here:
+
+- [project_sql folder](/project_sql/)
+
+## ✅ The 5 Core Questions Answered
 
 1. **Top-Paying Roles:** What are the top 10 highest-paying Data Analyst jobs available remotely?
 2. **Elite Skill Requirements:** What specific technical skills do these top-paying roles demand?
