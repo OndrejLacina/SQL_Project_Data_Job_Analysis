@@ -26,3 +26,4 @@ WHERE
     job_title_short IN ('Data Analyst', 'Senior Data Analyst')
 ORDER BY salary_year_avg DESC
 LIMIT 20;
+-- xx
