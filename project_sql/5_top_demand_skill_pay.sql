@@ -53,7 +53,7 @@ average_salary AS (
 SELECT
   skills_demand.skills,
   skills_demand.demand_count,
-  ROUND(average_salary.avg_salary, 2) AS avg_salary --ROUND to 2 decimals 
+  ROUND(average_salary.avg_salary, 0) AS avg_salary --ROUND to 2 decimals 
 FROM
   skills_demand
 	INNER JOIN
@@ -62,5 +62,4 @@ FROM
 ORDER BY
   demand_count DESC, 
 	avg_salary DESC
-LIMIT 10 --Limit 25
-; 
+LIMIT 10; --Limit 25 

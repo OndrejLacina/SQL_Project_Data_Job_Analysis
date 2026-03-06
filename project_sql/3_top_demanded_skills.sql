@@ -1,9 +1,9 @@
 /*
-Question: What are the most in-demand skills for data analysts?
+QUESTION: What are the most in-demand skills for data analysts (globally)?
     1. join job postings to inner join table similar to query 2
-    2. identify the top 5 in-demand skills for a data analyst
+    2. identify the top 15 in-demand skills for a data analyst
     3. focus on all job postings
-    Why? Retrieves the top 5 skills with the highest demand in the job market, providing insights into the most valuable skills for job seekers.
+WHY? Retrieves the top 15 skills with the highest demand in the job market, providing insights into the most valuable skills for job seekers.
 
 My notes: 
     - použiji zde 3 různá řešení (1. mé úplně první řešení použité v průběhu kurzu, 2. vylepšené pro rychlejší výpočet, 3. nejkratší)
@@ -26,7 +26,7 @@ GROUP BY
     sd.skill_id
 ORDER BY
     count_of_skills DESC
-LIMIT 5
+LIMIT 15
 
 
 -- 2. řešení - number first, text after (best logic for pc) practice CTEs
