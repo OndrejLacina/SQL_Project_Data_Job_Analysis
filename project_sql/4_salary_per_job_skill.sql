@@ -24,8 +24,8 @@ WHERE
 GROUP BY
     s.skills
 HAVING
-    COUNT(j.job_id) > 10 --  pro verzi prumerny_plat DESC
+    COUNT(j.job_id) > 10 --  version avg_salary DESC
 ORDER BY 
     count_of_jobs DESC
-    -- prumerny_plat DESC
+    -- avg_salary DESC
 LIMIT 15;
