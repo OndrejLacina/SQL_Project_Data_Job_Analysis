@@ -1,5 +1,7 @@
 # 📊 Data Analyst Job Market Analysis 2023-2025: SQL Portfolio Project
 
+-- also see my project in Excel: https://github.com/OndrejLacina/Excel_Projects_Data_Analytics/tree/main/Project2_Analysis
+
 ## 🎯 Project Overview
 
 This project explores the data analyst job market from 2023 to 2025, analyzing top-paying roles & companies (remotely), in-demand skills, and the intersection of salary and market demand. The ultimate goal is to move beyond simple job counts and engineer a custom ROI (Return on Investment) model to identify the most optimal technologies an aspiring Data Analyst should master.
